@@ -41,4 +41,5 @@ COPY etc/nginx.conf /usr/local/openresty/nginx/conf/
 # Ports and Docker stuff
 EXPOSE 80
 STOPSIGNAL SIGTERM
+COPY openidc.lua /usr/local/openresty/site/lualib/resty/openidc.lua
 ENTRYPOINT ["/usr/local/openresty/nginx/sbin/nginx", "-g", "daemon off;"]
